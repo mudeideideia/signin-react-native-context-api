@@ -1,0 +1,12 @@
+{
+  "name": "context-api-rocketseat",
+  "displayName": "context-api-rocketseat",
+  "expo": {
+    "name": "context-api-rocketseat",
+    "slug": "context-api-rocketseat",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
