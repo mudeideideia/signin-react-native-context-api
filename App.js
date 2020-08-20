@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
 
-export default function App() {
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './src/contexts/auth'
+
+import Routes from './src/routes'
+
+function App() {
+  //Todo os componentes dentro do provedor tem acesso ao contexto
+  // No caso abaixo, todas as rotas tem acesso ao contexto, mas as navegação não
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
